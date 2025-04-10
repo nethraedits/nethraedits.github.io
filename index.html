@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nethra Portfolio</title>
+  <title>Nethra's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
@@ -222,6 +222,12 @@
   opacity: 0.10; /* Subtle feel */
   filter: brightness(0.7) contrast(1.2) blur(1px);
 }
+.text-and-services {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 
     
   </style>
@@ -240,22 +246,36 @@
   </video>
   
   <div class="container">
-    <div class="profile-intro-flex reveal">
+    <div class="profile-intro-flex reveal" style="display: flex; gap: 40px; flex-wrap: wrap;">
       <img src="../static/profile.png" alt="Nethra" class="profile-img">
-      <div class="intro-text">
-        <h1 class="glow">Nethra</h1>
-        <p class="text-gray">Video Creator & Editor</p>
-        <p class="text-light">nethranand77@gmail.com</p>
-        <p class="intro">
-          I'm a passionate video editor and scriptwriter with a strong foundation in Adobe Premiere Pro and storytelling,
-          backed by two months of hands-on learning and practice. Skilled in cinematic editing, voice-over scripting, and creating
-          engaging visual content. I also work on Adobe After Effects and learning advanced motion graphics.
-          If you are looking for a video editor that can help you grow your business and brand awareness, look no further.
-          Contact me and let’s get started on your next video project.
-        </p>
+  
+      <div class="text-and-services" style="display: flex; gap: 40px; flex-wrap: wrap;">
+        <div class="intro-text">
+          <h1 class="glow">Nethra</h1>
+          <p class="text-gray">Content Creator & Editor</p>
+          <p class="text-light">nethranand77@gmail.com</p>
+          <p class="intro">
+            I'm a passionate video editor and scriptwriter with a strong foundation in Adobe Premiere Pro and storytelling,
+            backed by two months of hands-on learning and practice. Skilled in cinematic editing, voice-over scripting, and creating
+            engaging visual content. I also work on Adobe After Effects and learning advanced motion graphics.
+            If you are looking for a video editor that can help you grow your business and brand awareness, look no further.
+            Contact me and let’s get started on your next video project.
+          </p>
+        </div>
+  
+        <div class="services" style="margin-top: 100px;">
+          <h3 style="margin-bottom: 8px;">Services</h3>
+          <ul style="padding-left: 20px; margin: 0;">
+            <li>Video Editing using Premiere Pro</li>
+            <li>Script Writing</li>
+            <li>Content Planning</li>
+            <li><em>Motion Graphics - starting soon</em></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+  
 
   <div class="section reveal">
     <h2>🎬 Short Form Videos</h2>
