@@ -344,6 +344,79 @@ body {
   text-decoration: underline; /* Optional: Adds underline to Services heading */
 }
 
+/* === Mobile Responsive Styles === */
+@media (max-width: 768px) {
+  .left-panel {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1.5rem 1rem;
+    border-right: none;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 1.2rem;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-gray,
+  .text-light,
+  .intro {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .left-panel .services h3 {
+    font-size: 1.1rem;
+  }
+
+  .left-panel .services ul {
+    font-size: 0.9rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    font-size: 0.9rem;
+    gap: 0.3rem;
+  }
+
+  .video-scroll {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-scroll iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 9/16;
+  }
+
+  .long-videos iframe {
+    height: 200px;
+  }
+
+  footer h2 {
+    font-size: 1.4rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  body {
+    padding: 0 0.8rem;
+  }
+}
 
   </style>
   
@@ -439,28 +512,30 @@ body {
   </div>
 </body>
 
+<script>
+  // GSAP initial animation
+  gsap.from(".glow", { duration: 1.2, opacity: 0, y: -20, ease: "power2.out" });
 
-  <script>
-    // GSAP initial animation
-    gsap.from(".glow", { duration: 1.2, opacity: 0, y: -20, ease: "power2.out" });
+  // Reveal on scroll
+  const reveals = document.querySelectorAll(".reveal");
 
-    // Reveal on scroll
-    const reveals = document.querySelectorAll(".reveal");
+  function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 150;
 
-    function revealOnScroll() {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
       }
     }
+  }
 
+  // Run after DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    revealOnScroll();
     window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
-  </script>
+  });
+</script>
 </body>
 </html>
